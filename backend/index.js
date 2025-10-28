@@ -11,8 +11,10 @@ app.get('/', (req, res) => {
 });
 
 const authRoutes = require('./routes/auth');
+const documentRoutes = require('./routes/documentRoutes');
 
 app.use('/api/auth', authRoutes);
+app.use('/api/documents', documentRoutes);
 
 app.listen(PORT, () => {
     console.log(`Сервер успішно запущено на порті ${PORT}`);
